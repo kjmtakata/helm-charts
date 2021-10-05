@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rtsp-viewer
+spec:
+  selector:
+    matchLabels:
+      app:  rtsp-viewer
+  template:
+    metadata:
+      labels:
+        app:  rtsp-viewer
+    spec:
+      containers:
+        - name:  rtsp-viewer
+          image: docker.io/kjmtakata/rtsp-viewer:frontend-only
+          ports:
+            - containerPort: 5000
+          env:
+            - name: WS_URLS
+              value: "{{ range .Values.cameras }}{{ .name }},{{ end }}"
+{{ range .Values.cameras }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rtsp-websocket-relay-{{ .name }}
+spec:
+  selector:
+    matchLabels:
+      app: rtsp-websocket-relay-{{ .name }}
+  template:
+    metadata:
+      labels:
+        app: rtsp-websocket-relay-{{ .name }}
+    spec:
+      containers:
+        - name: rtsp-websocket-relay-{{ .name }}
+          image: docker.io/kjmtakata/rtsp-websocket-relay:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: RTSP_URL
+              value: {{ .rtspUrl | quote }}
+{{ end }}

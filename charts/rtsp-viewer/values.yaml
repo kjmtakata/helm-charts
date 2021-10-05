@@ -1,0 +1,3 @@
+cameras:
+  - name: placeholder
+    rtspUrl: rtsp://ip/path
