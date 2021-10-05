@@ -1,0 +1,12 @@
+apiVersion: v1
+entries:
+  rtsp-viewer:
+  - apiVersion: v2
+    created: "2021-10-05T16:48:27.867556767Z"
+    digest: 19324cf923d2d72f492c7a05439ccfe1e7727e4065e5f6bd75fad9e842b90bda
+    name: rtsp-viewer
+    type: application
+    urls:
+    - https://github.com/kjmtakata/helm-charts/releases/download/rtsp-viewer-0.1.1/rtsp-viewer-0.1.1.tgz
+    version: 0.1.1
+generated: "2021-10-05T16:48:27.867562768Z"
