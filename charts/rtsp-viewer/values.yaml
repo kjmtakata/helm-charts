@@ -1,3 +1,6 @@
 cameras:
   - name: placeholder
     rtspUrl: rtsp://ip/path
+
+ingress:
+  class: nginx
