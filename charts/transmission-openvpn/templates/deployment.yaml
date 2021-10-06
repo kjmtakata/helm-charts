@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: transmission-openvpn
+spec:
+  selector:
+    matchLabels:
+      app:  transmission-openvpn
+  template:
+    metadata:
+      labels:
+        app:  transmission-openvpn
+    spec:
+      volumes:
+        {{ range .Values.volumes }}
+        - name: {{ .name }}
+          nfs:
+            server: {{ .nfs.server }}
+            path: {{ .nfs.path }}
+        {{ end }}
+      containers:
+        - name:  transmission-openvpn
+          image: docker.io/haugene/transmission-openvpn:latest
+          ports:
+            - containerPort: 9091
+          env:
+            - name: OPENVPN_PROVIDER
+              value: {{ .Values.openvpn.provider }}
+            - name: OPENVPN_USERNAME
+              value: {{ .Values.openvpn.username }}
+            - name: OPENVPN_PASSWORD
+              value: {{ .Values.openvpn.password }}
+            - name: OPENVPN_CONFIG
+              value: {{ .Values.openvpn.config }}
+            - name: LOCAL_NETWORK
+              value: "10.0.0.0/8"
+          securityContext:
+            capabilities:
+              add: ["NET_ADMIN"]
+          volumeMounts:
+            {{ range .Values.volumes }}
+            - name: {{ .name }}
+              mountPath: {{ .mountPath }}
+            {{ end }}

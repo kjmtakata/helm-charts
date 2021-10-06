@@ -1,0 +1,15 @@
+ingress:
+  class: nginx
+
+openvpn:
+  provider:
+  username:
+  password:
+  config:
+
+volumes:
+  - name:
+    nfs:
+      server:
+      path:
+    mountPath:
