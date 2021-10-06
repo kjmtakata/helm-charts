@@ -17,4 +17,13 @@ entries:
     urls:
     - https://github.com/kjmtakata/helm-charts/releases/download/rtsp-viewer-0.1.1/rtsp-viewer-0.1.1.tgz
     version: 0.1.1
-generated: "2021-10-05T19:07:27.631766936Z"
+  transmission-openvpn:
+  - apiVersion: v2
+    created: "2021-10-06T00:28:51.855600251Z"
+    digest: 5d96ffef5eb1fe29c0f4ea1c5d808f99e73ee4ab32763d27e54c73d09c71ac33
+    name: transmission-openvpn
+    type: application
+    urls:
+    - https://github.com/kjmtakata/helm-charts/releases/download/transmission-openvpn-0.1.0/transmission-openvpn-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-10-06T00:28:51.855607551Z"
