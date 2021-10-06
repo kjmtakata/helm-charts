@@ -34,6 +34,14 @@ spec:
               value: {{ .Values.openvpn.config }}
             - name: LOCAL_NETWORK
               value: "10.0.0.0/8"
+            - name: TRANSMISSION_DOWNLOAD_DIR
+              value: {{ .Values.downloadDir }}
+            - name: TRANSMISSION_INCOMPLETE_DIR_ENABLED
+              value: false
+            - name: PUID
+              value: {{ .Values.puid }}
+            - name: PGID
+              value: {{ .Values.pgid }}
           securityContext:
             capabilities:
               add: ["NET_ADMIN"]
