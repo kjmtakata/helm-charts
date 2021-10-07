@@ -1,5 +1,6 @@
 ingress:
   class: nginx
+  annotations: {}
 
 openvpn:
   provider:
