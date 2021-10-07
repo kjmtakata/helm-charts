@@ -13,6 +13,15 @@ entries:
     urls:
     - https://github.com/kjmtakata/helm-charts/releases/download/letsencrypt-cert-manager-0.1.0/letsencrypt-cert-manager-0.1.0.tgz
     version: 0.1.0
+  letsencrypt-issuer:
+  - apiVersion: v2
+    created: "2021-10-07T21:45:27.283755828Z"
+    digest: 57c81c61a5db341285182554cc77bee92da87c28daaa87496e8ad58dd4541247
+    name: letsencrypt-issuer
+    type: application
+    urls:
+    - https://github.com/kjmtakata/helm-charts/releases/download/letsencrypt-issuer-0.1.0/letsencrypt-issuer-0.1.0.tgz
+    version: 0.1.0
   rtsp-viewer:
   - apiVersion: v2
     created: "2021-10-05T19:07:27.631759436Z"
@@ -55,4 +64,4 @@ entries:
     urls:
     - https://github.com/kjmtakata/helm-charts/releases/download/transmission-openvpn-0.1.0/transmission-openvpn-0.1.0.tgz
     version: 0.1.0
-generated: "2021-10-07T03:44:20.136642957Z"
+generated: "2021-10-07T21:45:27.283769328Z"
