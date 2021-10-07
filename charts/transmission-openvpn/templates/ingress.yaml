@@ -24,3 +24,6 @@ spec:
                   number: 9091
             path: /transmission
             pathType: Prefix
+      {{- if .Values.ingress.tls.host }}
+      host: {{ .Values.ingress.tls.host }}
+      {{- end }}
