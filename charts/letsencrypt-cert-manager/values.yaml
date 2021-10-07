@@ -1,5 +1,0 @@
-ingress:
-  class: nginx
-
-cert-manager:
-  installCRDs: true
