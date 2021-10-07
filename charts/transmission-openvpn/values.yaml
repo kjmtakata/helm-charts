@@ -1,6 +1,9 @@
 ingress:
   class: nginx
   annotations: {}
+  tls:
+    enabled: false
+    host:
 
 openvpn:
   provider:
