@@ -1,5 +1,18 @@
 apiVersion: v1
 entries:
+  letsencrypt-cert-manager:
+  - apiVersion: v2
+    created: "2021-10-07T03:44:20.136620356Z"
+    dependencies:
+    - name: cert-manager
+      repository: https://charts.jetstack.io
+      version: 1.5.4
+    digest: 38430f0a52822e8ddc2a2f111a8cc129922ec7b2e7ceb28167983ae48bcf4ea9
+    name: letsencrypt-cert-manager
+    type: application
+    urls:
+    - https://github.com/kjmtakata/helm-charts/releases/download/letsencrypt-cert-manager-0.1.0/letsencrypt-cert-manager-0.1.0.tgz
+    version: 0.1.0
   rtsp-viewer:
   - apiVersion: v2
     created: "2021-10-05T19:07:27.631759436Z"
@@ -42,4 +55,4 @@ entries:
     urls:
     - https://github.com/kjmtakata/helm-charts/releases/download/transmission-openvpn-0.1.0/transmission-openvpn-0.1.0.tgz
     version: 0.1.0
-generated: "2021-10-06T01:03:40.445742615Z"
+generated: "2021-10-07T03:44:20.136642957Z"
