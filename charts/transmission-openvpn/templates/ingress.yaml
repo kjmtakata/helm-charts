@@ -3,9 +3,9 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: {{ .Values.ingress.class }}
-    {{- if .Values.ingress.annotations }}
-    {{ toYaml .Values.ingress.annotations }}
-    {{- end }}
+{{- with .Values.ingress.annotations }}
+{{ toYaml . | indent 4 }}
+{{- end }}
   name: transmission-openvpn
 spec:
   {{- if .Values.ingress.tls.enabled }}
