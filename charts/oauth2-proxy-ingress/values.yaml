@@ -1,5 +1,9 @@
 ingress:
   class: nginx
+  annotations: {}
+  tls:
+    enabled: false
+    host:
 
 oauth2-proxy:
   config:
