@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: {{ .Values.ingress.class }}
+  name: {{ template "oauth2-proxy-ingress.fullname" . }}
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          service:
+            name: {{ template "oauth2-proxy-ingress.fullname" . }}
+            port: 
+              number: 80
+        path: /oauth2
+        pathType: Prefix

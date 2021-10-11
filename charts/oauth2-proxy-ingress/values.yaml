@@ -1,0 +1,11 @@
+ingress:
+  class: nginx
+
+oauth2-proxy:
+  config:
+    clientID: 
+    clientSecret:
+    configFile:
+  authenticatedEmailsFile:
+    enabled: true
+    restricted_access:
