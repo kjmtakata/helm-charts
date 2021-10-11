@@ -24,6 +24,18 @@ entries:
     version: 0.1.0
   oauth2-proxy-ingress:
   - apiVersion: v2
+    created: "2021-10-11T19:03:35.43944451Z"
+    dependencies:
+    - name: oauth2-proxy
+      repository: https://oauth2-proxy.github.io/manifests
+      version: ~4.2.2
+    digest: 8c49384f25355e26db1d88728fe6498c5042dd85e07156424e0b94a5c63580f0
+    name: oauth2-proxy-ingress
+    type: application
+    urls:
+    - https://github.com/kjmtakata/helm-charts/releases/download/oauth2-proxy-ingress-0.1.2/oauth2-proxy-ingress-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     created: "2021-10-11T18:37:24.985020559Z"
     dependencies:
     - name: oauth2-proxy
@@ -101,4 +113,4 @@ entries:
     urls:
     - https://github.com/kjmtakata/helm-charts/releases/download/transmission-openvpn-0.1.0/transmission-openvpn-0.1.0.tgz
     version: 0.1.0
-generated: "2021-10-11T18:37:24.98504966Z"
+generated: "2021-10-11T19:03:35.43946951Z"
