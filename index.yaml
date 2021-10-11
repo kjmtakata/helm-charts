@@ -22,6 +22,19 @@ entries:
     urls:
     - https://github.com/kjmtakata/helm-charts/releases/download/letsencrypt-issuer-0.1.0/letsencrypt-issuer-0.1.0.tgz
     version: 0.1.0
+  oauth2-proxy-ingress:
+  - apiVersion: v2
+    created: "2021-10-11T18:37:24.985020559Z"
+    dependencies:
+    - name: oauth2-proxy
+      repository: https://oauth2-proxy.github.io/manifests
+      version: ~4.2.2
+    digest: 50e5e6293eddeab716b2c4a4c2ef699771d11213e0a7bb6093e210f9a50cc8f6
+    name: oauth2-proxy-ingress
+    type: application
+    urls:
+    - https://github.com/kjmtakata/helm-charts/releases/download/oauth2-proxy-ingress-0.1.1/oauth2-proxy-ingress-0.1.1.tgz
+    version: 0.1.1
   rtsp-viewer:
   - apiVersion: v2
     created: "2021-10-05T19:07:27.631759436Z"
@@ -88,4 +101,4 @@ entries:
     urls:
     - https://github.com/kjmtakata/helm-charts/releases/download/transmission-openvpn-0.1.0/transmission-openvpn-0.1.0.tgz
     version: 0.1.0
-generated: "2021-10-11T18:35:18.044863473Z"
+generated: "2021-10-11T18:37:24.98504966Z"
