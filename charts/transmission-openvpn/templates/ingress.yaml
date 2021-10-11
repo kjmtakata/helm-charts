@@ -22,7 +22,7 @@ spec:
                 name: transmission-openvpn
                 port: 
                   number: 9091
-            path: /transmission
+            path: /
             pathType: Prefix
       {{- if .Values.ingress.tls.host }}
       host: {{ .Values.ingress.tls.host }}
