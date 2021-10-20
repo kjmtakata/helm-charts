@@ -47,6 +47,16 @@ entries:
     urls:
     - https://github.com/kjmtakata/helm-charts/releases/download/oauth2-proxy-ingress-0.1.1/oauth2-proxy-ingress-0.1.1.tgz
     version: 0.1.1
+  plex:
+  - apiVersion: v2
+    created: "2021-10-20T22:39:24.31371546Z"
+    description: A Helm chart for Kubernetes
+    digest: 7eae0a23e40233e29d92df37a10d34c1729bbd1fab797dc35b53d9e23de89827
+    name: plex
+    type: application
+    urls:
+    - https://github.com/kjmtakata/helm-charts/releases/download/plex-0.1.0/plex-0.1.0.tgz
+    version: 0.1.0
   rtsp-viewer:
   - apiVersion: v2
     created: "2021-10-05T19:07:27.631759436Z"
@@ -129,4 +139,4 @@ entries:
     urls:
     - https://github.com/kjmtakata/helm-charts/releases/download/transmission-openvpn-0.1.0/transmission-openvpn-0.1.0.tgz
     version: 0.1.0
-generated: "2021-10-20T22:11:57.834057544Z"
+generated: "2021-10-20T22:39:24.31374176Z"
