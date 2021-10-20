@@ -14,9 +14,8 @@ spec:
       volumes:
         {{ range .Values.volumes }}
         - name: {{ .name }}
-          nfs:
-            server: {{ .nfs.server }}
-            path: {{ .nfs.path }}
+          hostPath:
+            path: {{ .path }}
         {{ end }}
       containers:
         - name:  transmission-openvpn
