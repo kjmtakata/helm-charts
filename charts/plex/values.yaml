@@ -1,0 +1,11 @@
+metallb:
+  sharedIp:
+
+volumes:
+  - name:
+    path:
+    mountPath:
+    
+advertiseIp:
+uid:
+gid:

@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: plex
+spec:
+  selector:
+    matchLabels:
+      app:  plex
+  template:
+    metadata:
+      labels:
+        app:  plex
+    spec:
+      volumes:
+        {{ range .Values.volumes }}
+        - name: {{ .name }}
+          hostPath:
+            path: {{ .path }}
+        {{ end }}
+      containers:
+        - name:  plex
+          image: docker.io/plexinc/pms-docker:latest
+          ports:
+            - containerPort: 32400
+          env:
+            - name: ADVERTISE_IP
+              value: {{ .Values.advertiseIp | quote }}
+            - name: PLEX_UID
+              value: {{ .Values.uid | quote }}
+            - name: PLEX_GID
+              value: {{ .Values.gid | quote }}
+          volumeMounts:
+            {{ range .Values.volumes }}
+            - name: {{ .name }}
+              mountPath: {{ .mountPath }}
+            {{ end }}
