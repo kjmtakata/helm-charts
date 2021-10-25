@@ -83,6 +83,15 @@ entries:
     urls:
     - https://github.com/kjmtakata/helm-charts/releases/download/rtsp-viewer-0.1.1/rtsp-viewer-0.1.1.tgz
     version: 0.1.1
+  sonarr:
+  - apiVersion: v2
+    created: "2021-10-25T20:04:09.097752755Z"
+    digest: 9fd0dfbac2d0adf7143dc5359a01c02711f05c372849b014822c0e00229f010c
+    name: sonarr
+    type: application
+    urls:
+    - https://github.com/kjmtakata/helm-charts/releases/download/sonarr-0.1.0/sonarr-0.1.0.tgz
+    version: 0.1.0
   transmission-openvpn:
   - apiVersion: v2
     created: "2021-10-20T22:11:57.83259395Z"
@@ -148,4 +157,4 @@ entries:
     urls:
     - https://github.com/kjmtakata/helm-charts/releases/download/transmission-openvpn-0.1.0/transmission-openvpn-0.1.0.tgz
     version: 0.1.0
-generated: "2021-10-25T20:02:04.517278332Z"
+generated: "2021-10-25T20:04:09.098022759Z"
