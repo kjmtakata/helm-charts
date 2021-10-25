@@ -57,6 +57,15 @@ entries:
     urls:
     - https://github.com/kjmtakata/helm-charts/releases/download/plex-0.1.0/plex-0.1.0.tgz
     version: 0.1.0
+  radarr:
+  - apiVersion: v2
+    created: "2021-10-25T20:02:04.517248432Z"
+    digest: 225d8ab10a43ad8e55d341866765aea6c796ae46aca781ee50acfb00fdb063e2
+    name: radarr
+    type: application
+    urls:
+    - https://github.com/kjmtakata/helm-charts/releases/download/radarr-0.1.0/radarr-0.1.0.tgz
+    version: 0.1.0
   rtsp-viewer:
   - apiVersion: v2
     created: "2021-10-05T19:07:27.631759436Z"
@@ -139,4 +148,4 @@ entries:
     urls:
     - https://github.com/kjmtakata/helm-charts/releases/download/transmission-openvpn-0.1.0/transmission-openvpn-0.1.0.tgz
     version: 0.1.0
-generated: "2021-10-20T22:39:24.31374176Z"
+generated: "2021-10-25T20:02:04.517278332Z"
