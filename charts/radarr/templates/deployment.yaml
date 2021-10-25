@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: radarr
+spec:
+  selector:
+    matchLabels:
+      app:  radarr
+  template:
+    metadata:
+      labels:
+        app:  radarr
+    spec:
+      volumes:
+        {{ range .Values.volumes }}
+        - name: {{ .name }}
+          hostPath:
+            path: {{ .path }}
+        {{ end }}
+      containers:
+        - name:  radarr
+          image: docker.io/linuxserver/radarr:latest
+          ports:
+            - containerPort: 7878
+          env:
+            - name: PUID
+              value: {{ .Values.puid | quote }}
+            - name: PGID
+              value: {{ .Values.pgid | quote }}
+          volumeMounts:
+            {{ range .Values.volumes }}
+            - name: {{ .name }}
+              mountPath: {{ .mountPath }}
+            {{ end }}

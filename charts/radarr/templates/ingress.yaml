@@ -1,0 +1,29 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: {{ .Values.ingress.class }}
+{{- with .Values.ingress.annotations }}
+{{ toYaml . | indent 4 }}
+{{- end }}
+  name: radarr
+spec:
+  {{- if .Values.ingress.tls.enabled }}
+  tls:
+    - hosts:
+      - {{ .Values.ingress.tls.host }}
+      secretName: {{ .Values.ingress.tls.host }}
+  {{- end }}
+  rules:
+    - http:
+        paths:
+          - backend:
+              service: 
+                name: radarr
+                port: 
+                  number: 7878
+            path: /radarr
+            pathType: Prefix
+      {{- if .Values.ingress.tls.host }}
+      host: {{ .Values.ingress.tls.host }}
+      {{- end }}
