@@ -6,6 +6,8 @@ spec:
   selector:
     matchLabels:
       app:  transmission-openvpn
+  strategy:
+    type: Recreate
   template:
     metadata:
       labels:
@@ -41,6 +43,12 @@ spec:
               value: {{ .Values.puid | quote }}
             - name: PGID
               value: {{ .Values.pgid | quote }}
+            - name: TRANSMISSION_WEB_UI
+              value: "combustion"
+            - name: TRANSMISSION_RATIO_LIMIT
+              value: "0"
+            - name: TRANSMISSION_RATIO_LIMIT_ENABLED
+              value: "true"
           securityContext:
             capabilities:
               add: ["NET_ADMIN"]
