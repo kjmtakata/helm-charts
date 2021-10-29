@@ -94,6 +94,14 @@ entries:
     version: 0.1.0
   transmission-openvpn:
   - apiVersion: v2
+    created: "2021-10-29T17:07:44.223099356Z"
+    digest: 1db10c807a4a7b0e2de2e0eeb4e3da70b9e768bf644b9bc0114ad724565573ef
+    name: transmission-openvpn
+    type: application
+    urls:
+    - https://github.com/kjmtakata/helm-charts/releases/download/transmission-openvpn-0.1.9/transmission-openvpn-0.1.9.tgz
+    version: 0.1.9
+  - apiVersion: v2
     created: "2021-10-27T16:50:23.975645053Z"
     digest: a606c17d763db485644405e38aeaeca0a9dccaf148ef0aed429c274ca50cd8a5
     name: transmission-openvpn
@@ -165,4 +173,4 @@ entries:
     urls:
     - https://github.com/kjmtakata/helm-charts/releases/download/transmission-openvpn-0.1.0/transmission-openvpn-0.1.0.tgz
     version: 0.1.0
-generated: "2021-10-27T16:50:23.975704354Z"
+generated: "2021-10-29T17:07:44.223149545Z"
