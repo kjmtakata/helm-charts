@@ -13,6 +13,7 @@ spec:
       labels:
         app:  transmission-openvpn
     spec:
+      terminationGracePeriodSeconds: 120
       volumes:
         {{ range .Values.volumes }}
         - name: {{ .name }}
@@ -57,19 +58,3 @@ spec:
             - name: {{ .name }}
               mountPath: {{ .mountPath }}
             {{ end }}
-          livenessProbe:
-            failureThreshold: 3
-            initialDelaySeconds: 10
-            periodSeconds: 2
-            successThreshold: 1
-            tcpSocket:
-              port: 9091
-            timeoutSeconds: 2
-          readinessProbe:
-            failureThreshold: 3
-            initialDelaySeconds: 10
-            periodSeconds: 2
-            successThreshold: 2
-            tcpSocket:
-              port: 9091
-            timeoutSeconds: 2
