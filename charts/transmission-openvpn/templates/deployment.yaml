@@ -26,30 +26,10 @@ spec:
           ports:
             - containerPort: 9091
           env:
-            - name: OPENVPN_PROVIDER
-              value: {{ .Values.openvpn.provider | quote }}
-            - name: OPENVPN_USERNAME
-              value: {{ .Values.openvpn.username | quote }}
-            - name: OPENVPN_PASSWORD
-              value: {{ .Values.openvpn.password | quote }}
-            - name: OPENVPN_CONFIG
-              value: {{ .Values.openvpn.config | quote }}
-            - name: LOCAL_NETWORK
-              value: "10.0.0.0/8"
-            - name: TRANSMISSION_DOWNLOAD_DIR
-              value: {{ .Values.downloadDir | quote }}
-            - name: TRANSMISSION_INCOMPLETE_DIR_ENABLED
-              value: "false"
-            - name: PUID
-              value: {{ .Values.puid | quote }}
-            - name: PGID
-              value: {{ .Values.pgid | quote }}
-            - name: TRANSMISSION_WEB_UI
-              value: "combustion"
-            - name: TRANSMISSION_RATIO_LIMIT
-              value: "0"
-            - name: TRANSMISSION_RATIO_LIMIT_ENABLED
-              value: "true"
+            {{ range $key, $value := .Values.env }}
+            - name: {{ $key }}
+              value: {{ $value | quote}}
+            {{ end }}
           securityContext:
             capabilities:
               add: ["NET_ADMIN"]
