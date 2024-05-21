@@ -59,6 +59,14 @@ entries:
     version: 0.1.0
   radarr:
   - apiVersion: v2
+    created: "2024-05-21T04:45:09.862007068Z"
+    digest: 7fdd26468bac003e3dd77332347ed1fb2ca16dc396d4e385590e3367cbde4d3d
+    name: radarr
+    type: application
+    urls:
+    - https://github.com/kjmtakata/helm-charts/releases/download/radarr-0.1.1/radarr-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     created: "2021-10-25T20:02:04.517248432Z"
     digest: 225d8ab10a43ad8e55d341866765aea6c796ae46aca781ee50acfb00fdb063e2
     name: radarr
@@ -197,4 +205,4 @@ entries:
     urls:
     - https://github.com/kjmtakata/helm-charts/releases/download/transmission-openvpn-0.1.0/transmission-openvpn-0.1.0.tgz
     version: 0.1.0
-generated: "2021-11-08T23:31:47.727902855Z"
+generated: "2024-05-21T04:45:09.862076929Z"
